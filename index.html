@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Valentine Proposal 💖</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            color: #e60073;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #ff4da6;
+            color: white;
+        }
+        .no {
+            background-color: #999;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="step1">
+        <h1>Will you be my Valentine? 💖</h1>
+        <button class="yes" onclick="yesClicked()">YES 💕</button>
+        <button class="no" onclick="noClicked()">NO 😢</button>
+    </div>
+
+    <div id="step2" style="display:none;">
+        <h1>Congratulations my babeeee 🥰</h1>
+        <h2>We are officially a couple now 💑❤️</h2>
+    </div>
+
+    <div id="step3" style="display:none;">
+        <h1>You don’t want this handsome boy? 😏</h1>
+        <p>Then what do you want?</p>
+        <button class="yes" onclick="handsome()">Handsome Boy 😍</button>
+        <button class="no">Bad Boy 😎</button>
+    </div>
+
+    <div id="step4" style="display:none;">
+        <h1>Choose your future husband 💍</h1>
+        <button class="yes" onclick="final()">Rohan ❤️</button>
+    </div>
+
+    <div id="step5" style="display:none;">
+        <h1>Great choice 😍</h1>
+        <h2>Rohan is your future husband 💖</h2>
+    </div>
+
+    <script>
+        function yesClicked() {
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step2").style.display = "block";
+        }
+
+        function noClicked() {
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step3").style.display = "block";
+        }
+
+        function handsome() {
+            document.getElementById("step3").style.display = "none";
+            document.getElementById("step4").style.display = "block";
+        }
+
+        function final() {
+            document.getElementById("step4").style.display = "none";
+            document.getElementById("step5").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
